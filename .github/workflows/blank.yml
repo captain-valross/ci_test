@@ -28,5 +28,5 @@ jobs:
       - name: Test
         run: |
           docker build -f Dockerfile.test .
-          cat test_reports/jest-junit.xml
+          ls
 

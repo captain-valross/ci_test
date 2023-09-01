@@ -28,5 +28,6 @@ jobs:
       - name: Test
         run: |
           docker build -t test -f Dockerfile.test .
-          docker cp docker.io/library/test:/src/ .
+          docker run --name test
+          docker cp test:/src/ .
 

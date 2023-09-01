@@ -1,4 +1,4 @@
 export const returnZero = () => {
-	// const date = new Date();
-	return 0; // date.getMinutes() % 2;
+	const date = new Date();
+	return date.getMinutes() % 2;
 };

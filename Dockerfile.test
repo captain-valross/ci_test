@@ -6,4 +6,4 @@ WORKDIR /src
 COPY . .
 
 RUN npm ci
-RUN npm test; exit 0
+RUN npm test

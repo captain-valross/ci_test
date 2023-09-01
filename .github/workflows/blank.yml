@@ -33,7 +33,6 @@ jobs:
       - name: Unit Test
         run: |
           docker build -t test -f Dockerfile.test .
-          docker build -t test -f Dockerfile.test .
           docker run --name test test
           docker cp test:/src/test_reports/jest-junit.xml .
            

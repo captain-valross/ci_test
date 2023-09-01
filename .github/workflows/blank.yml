@@ -27,5 +27,6 @@ jobs:
 
       - name: Test
         run: |
-          npm ci
-          npm test
+          docker build -f Dockerfile.test .
+          ls
+

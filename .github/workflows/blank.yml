@@ -28,5 +28,5 @@ jobs:
       - name: Test
         run: |
           docker build -f Dockerfile.test .
-          ls
+          docker cp src/ .
 

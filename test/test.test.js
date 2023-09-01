@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import { returnZero } from '../source/myCode.js';
+import { returnZero } from '../source/index.js';
 
 jest.useFakeTimers();
 

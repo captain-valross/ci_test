@@ -32,12 +32,14 @@ jobs:
           docker cp test:/src/test_reports/jest-junit.xml .
           ls
 
-      - name: Test Report
-        uses: actions/upload-artifact@v2
-        if: success() || failure()    # run this step even if previous step failed
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/test-reporter@v1
         with:
-          name: JEST Tests            # Name of the check run which will be created
-          path: jest-junit.xml    # Path to test results
-          reporter: jest-junit        # Format of test results
+          artifact: test-results            # artifact name
+          name: JEST Tests                  # Name of the check run which will be created
+          path: 'jest-junit.xml'                     # Path to test results (inside artifact .zip)
+          reporter: jest-junit 
 
 

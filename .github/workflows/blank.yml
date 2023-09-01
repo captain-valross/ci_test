@@ -30,4 +30,5 @@ jobs:
           docker build -t test -f Dockerfile.test .
           docker run --name test test
           docker cp test:/src/ .
+          ls
 

@@ -1,6 +1,3 @@
-export const returnZero = () => {
-	const date = new Date();
-	return date.getMinutes() % 2;
-};
+import { returnZero } from './util.js';
 
 console.log('This is zero:', returnZero());

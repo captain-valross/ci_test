@@ -33,7 +33,7 @@ jobs:
           ls
 
       - name: Test Report
-        uses: dorny/test-reporter@v1
+        uses: actions/upload-artifact@v2
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: JEST Tests            # Name of the check run which will be created

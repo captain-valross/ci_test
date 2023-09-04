@@ -49,10 +49,5 @@ jobs:
           docker build .
           docker image ls
 
-      #- name: Upload Image
-      #  uses: actions/upload-artifact@v2  # upload test results
-      #  with:
-      #    name: image
-      #    path: jest-junit.xml
 
 
